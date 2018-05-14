@@ -1,3 +1,5 @@
+#!/usr/bin/ruby -w
+
 require 'aws-sdk-ec2'  # v2: require 'aws-sdk'
 require 'time'
 require 'active_support/core_ext/numeric/time.rb'
