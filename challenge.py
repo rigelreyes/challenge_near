@@ -22,9 +22,9 @@ for snap in response['Snapshots']:
         if time_snap < time_now.timedelta(days=-1) :
             if time_now.days != 15 :
                 print( "The snapshot: " + snap['Description'] + " with ID " + snap['Id'] + " is now being deleted..." )
-                client.delete_snapshot({snapshot_id: snap['Id']})
+                client.delete_snapshot({"snapshot_id": snap['Id']})
         else:
             print( "The snapshot: " + snap['Description'] + " with ID " + snap['Id'] + " will remain stored..." )
     else:
         print( "The snapshot: " + snap['Description'] + " with ID " + snap['Id'] + " is now being deleted..." )
-        client.delete_snapshot({snapshot_id: snap['Id']})
+        client.delete_snapshot({"snapshot_id": snap['Id']})
